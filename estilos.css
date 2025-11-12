@@ -1,0 +1,270 @@
+/* VARIABLES */
+:root {
+  --color-principal: #ffcc00;
+  --color-fondo: #111;
+  --color-blanco: #fff;
+  --color-texto: #222;
+  --color-hover: #e6b800;
+  --transicion: 0.3s ease;
+}
+
+/* BODY */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background-color: var(--color-fondo);
+  padding: 12px 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.contenedor-header {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 80px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--color-blanco);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transicion);
+}
+
+nav a:hover, nav a.activo {
+  color: var(--color-principal);
+}
+
+/* MENU HAMBURGUESA */
+.menu-btn {
+  display: none;
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  color: var(--color-blanco);
+  cursor: pointer;
+}
+
+nav.show ul {
+  display: block;
+}
+
+nav ul {
+  display: flex;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(to right, #fff, #fff7cc);
+}
+
+.texto-hero {
+  flex: 1 1 400px;
+  padding: 20px;
+}
+
+.texto-hero h1 span {
+  color: var(--color-principal);
+}
+
+.texto-hero p {
+  font-size: 1.1em;
+  margin: 15px 0;
+}
+
+.imagen-hero {
+  flex: 1 1 400px;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* BOTONES */
+.btn-principal, .btn-comprar {
+  background-color: var(--color-principal);
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color var(--transicion);
+}
+
+.btn-principal:hover, .btn-comprar:hover {
+  background-color: var(--color-hover);
+}
+
+
+
+/* FORMULARIO DE CONTACTO */
+.contacto {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* MENSAJE DE CONFIRMACIÓN */
+.mensaje-confirmacion {
+  background-color: #28a745;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: none;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--color-fondo);
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .productos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-btn {
+    display: block;
+    font-size: 40px;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav.show ul {
+    display: flex;
+  }
+}
+
+html, body {
+  height: 85%;
+  margin: 0;
+}
+
+
+main {
+  min-height: 100%;
+  padding-bottom: 60px; 
+}
+
+
+footer {
+  background-color: var(--color-fondo);
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.productos-seccion {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.productos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.productos article {
+  background: #fff;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.productos img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.productos article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-comprar {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background-color: #e6b800;
+}

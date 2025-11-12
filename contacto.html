@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ferretera Virtual - Contacto</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="codigo.js" defer></script> 
+</head>
+<body>
+  <header>
+    <div class="contenedor-header">
+      <img src="img/471f5ba9-2782-42ea-a2da-c30537da7481.png" alt="Logo Ferretera Virtual" class="logo">
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="contacto.html" class="activo">Contacto</a></li>
+        </ul>
+      </nav>
+      <button id="menu-btn" class="menu-btn">&#9776;</button> 
+    </div>
+  </header>
+
+  <main>
+    <section class="contacto">
+      <h1>Contáctanos</h1>
+      <form id="contact-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" placeholder="correo@ejemplo.com" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+        <button type="submit" class="btn-principal">Enviar</button>
+      </form>
+      <div id="mensaje-confirmacion" class="mensaje-confirmacion"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Ferretera Virtual | Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
